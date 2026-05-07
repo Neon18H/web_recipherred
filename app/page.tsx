@@ -93,7 +93,7 @@ export default function Home() {
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => {
         if (!e.isIntersecting) return;
-        e.currentTarget.querySelectorAll<HTMLElement>('[data-target]').forEach(el => {
+        (e.target as Element).querySelectorAll<HTMLElement>('[data-target]').forEach(el => {
           const target = parseInt(el.dataset.target!);
           const suffix = el.querySelector('sup')?.outerHTML || '';
           let cur = 0;
