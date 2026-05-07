@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic';
 import { useEffect, useRef, MouseEvent as ReactMouseEvent } from 'react';
 
-const HeroWebGPU = dynamic(() => import('@/components/ui/hero-webgpu'), {
+const HeroSection = dynamic(() => import('@/components/ui/hero-section').then(m => ({ default: m.HeroSection })), {
   ssr: false,
   loading: () => (
     <div style={{ height:'100vh', display:'flex', alignItems:'center', justifyContent:'center', background:'#03030a' }}>
@@ -159,7 +159,7 @@ export default function Home() {
       </nav>
 
       {/* HERO */}
-      <HeroWebGPU />
+      <HeroSection />
 
       {/* TICKER */}
       <div style={{ overflow:'hidden', borderTop:'1px solid rgba(192,20,42,0.15)', borderBottom:'1px solid rgba(192,20,42,0.15)', background:'rgba(192,20,42,0.03)', padding:'11px 0', position:'relative' }}>
