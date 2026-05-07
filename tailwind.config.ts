@@ -6,10 +6,11 @@ const config: Config = {
       fontFamily: {
         display: ['Syne', 'sans-serif'],
         mono:    ['Share Tech Mono', 'monospace'],
-        body:    ['Rajdhani', 'sans-serif'],
+        body:    ['Inter', 'sans-serif'],
       },
       colors: {
-        red: { DEFAULT: '#C0142A', bright: '#ff1a35' },
+        red:     { DEFAULT:'#C0142A', bright:'#ff1a35' },
+        surface: { DEFAULT:'#0d0d12', 2:'#13131a' },
       },
     },
   },
